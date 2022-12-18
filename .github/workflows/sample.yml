@@ -1,0 +1,16 @@
+name: Test Workflow
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  test1:
+    name: Test1
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Output Test Message
+        run: echo -e "Test Message."
